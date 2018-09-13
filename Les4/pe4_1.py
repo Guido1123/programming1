@@ -6,3 +6,5 @@ som = sum(cijfers)
 gemiddelde = som / len(cijfers)
 beloning = som * 30
 print('beloning ' + str(beloning))
+
+
