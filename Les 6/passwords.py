@@ -1,11 +1,18 @@
 def new_password(oldpassword, newpassword):
-    if newpassword != oldpassword and len(newpassword) >= 6:
-        print('true')
+    for cijfers in newpassword:
+        if cijfers in '0123456789':
+            cijfers = True
+        else:
+            cijfers = False
+    if oldpassword != newpassword and len(newpassword)>= 6 and cijfers:
+        return 'je wachtwoord is geweizigd'
     else:
-        print('false')
-    return new_password
+        return 'je wachtwoord is niet geweizigt'
+
+
+
+
 
 oldpassword = input('wat is je oude wachtwoord:')
 newpassword = input('wat is je nieuwe wachtwoord:')
-
-new_password(oldpassword, newpassword)
+print(new_password(oldpassword, newpassword))
